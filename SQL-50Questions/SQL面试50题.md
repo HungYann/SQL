@@ -2,7 +2,7 @@
 
 # 表结构
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjztu5banj30nu0hgan5.jpg)
 
 ### 1.查询课程编号为“01”的课程比“02”的课程成绩高的所有学生的学号
 
@@ -19,7 +19,7 @@ INNER JOIN Student as c on c.s_id = a.s_id
 where a.s_score > b.s_score
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%201.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%201.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%201.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjztvq3msj30b8036t8r.jpg)
 
 ### 2.查询平均成绩大于60分的学生的学号和平均成绩
 
@@ -27,7 +27,7 @@ where a.s_score > b.s_score
 select s_id,avg(s_score) from score group by s_id having avg(s_score)
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%202.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%202.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%202.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjztyfkujj307m07gaaa.jpg)
 
 ### 3. 查询所有学生的学号、姓名、选课数、总成绩
 
@@ -38,7 +38,7 @@ from Student as a left join Score as b on a.s_id = b.s_id
 group by a.s_id
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%203.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%203.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%203.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzu19mksj30nu088q3o.jpg)
 
 ### 4. 查询姓“猴”的老师的个数
 
@@ -46,7 +46,7 @@ group by a.s_id
 select count(distinct t_id) from Teacher where t_name like "侯%"
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%204.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%204.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%204.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzu53nd8j304o02e0sk.jpg)
 
 ### 5. 查询没学过“张三”老师课的学生的学号、姓名
 
@@ -70,7 +70,7 @@ select s_id,s_name from Student where s_id not in(
 )
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%205.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%205.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%205.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzu7hc70j305w030t8l.jpg)
 
 ### 6. 查询学过“张三”老师所教的所有课的同学的学号、姓名
 
@@ -84,7 +84,7 @@ select s_id, s_name from Student where s_id in (
 )
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%206.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%206.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%206.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzu9bug4j3062066dfx.jpg)
 
 ### 7. 查询学过编号为“01”的课程并且也学过编号为“02”的课程的学生的学号、姓名
 
@@ -98,7 +98,7 @@ select a.s_id from  (
 ) where a.c_id = "01" and b.c_id = "02" )
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%207.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%207.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%207.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzuci6vej306205qt8s.jpg)
 
 ### 8.查询课程编号为“02”的总成绩
 
@@ -106,7 +106,7 @@ select a.s_id from  (
 select sum(s_score),avg(s_score),count(distinct s_id) from Score where c_id = "02"
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%208.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%208.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%208.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzufqhjqj30f0028gll.jpg)
 
 ### 9.查询所有课程成绩小于60分的学生的学号、姓名
 
@@ -119,7 +119,7 @@ on a.s_id = b.s_id  where a.cnt = b.cnt
 )
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%209.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%209.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%209.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzui2zbjj30600340sn.jpg)
 
 ### 10. 查询没有学全所有课的学生的学号、姓名
 
@@ -129,7 +129,7 @@ as sc on st.s_id = sc.s_id group by st.s_id
 having count(distinct sc.c_id) < (select count(c_id) from Course)
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2010.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2010.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2010.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzukehcnj30bu04yq37.jpg)
 
 ### 11. 查询至少有一门课与学号为“01”的学生所学课程相同的学生的学号和姓名
 
@@ -141,7 +141,7 @@ select s_id,s_name from Student where s_id in (
 )
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2011.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2011.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2011.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzunpf63j306806kjri.jpg)
 
 ### 12.查询和“01”号同学所学课程完全相同的其他同学的学号
 
@@ -172,7 +172,7 @@ select * from Student where s_id in (
 )
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2012.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2012.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2012.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzuqophoj303c040jr7.jpg)
 
 ### 13. 查询没学过"张三"老师讲授的任一门课程的学生姓名
 
@@ -184,7 +184,7 @@ select * from Student where s_id not in(
 )
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2013.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2013.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2013.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzutxj8hj30by036mx8.jpg)
 
 ### 15. 查询两门及其以上不及格课程的同学的学号，姓名及其平均成绩
 
@@ -196,7 +196,7 @@ where st.s_id in(
 group by st.s_id,st.s_name
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2014.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2014.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2014.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzuylikaj30b003awej.jpg)
 
 ### 16. 检索"01"课程分数小于60，按分数降序排列的学生信息
 
@@ -206,7 +206,7 @@ on st.s_id = sc.s_id where sc.c_id = "01"
 and sc.s_score < 60 order by sc.s_score desc
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2015.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2015.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2015.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzuz0rzcj30j203ut90.jpg)
 
 ### 17. 按平均成绩从高到低显示所有学生的所有课程的成绩以及平均成绩
 
@@ -225,9 +225,9 @@ avg(s_score) "平均成绩"
 from Score group by s_id order by "平均成绩" desc
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2016.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2016.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2016.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzv0yt0hj30as0b8js4.jpg)
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2017.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2017.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2017.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzv45h3ej30d408674w.jpg)
 
 ### 18. 查询各科成绩最高分、最低分和平均分：以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率
 
@@ -242,7 +242,7 @@ from
 (SELECT * from Score) as b on a.c_id = b.c_id GROUP BY a.c_id
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2018.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2018.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2018.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzwf3mm4j313k05s0tg.jpg)
 
 ### 19. 按各科成绩进行排序，并显示排名
 
@@ -251,7 +251,7 @@ SELECT *,ROW_NUMBER() over(PARTITION by c_id
  order by s_score ) as ranking from Score
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2019.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2019.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2019.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzv7d9dsj30eo0dw0tg.jpg)
 
 ### 20. 查询学生的总成绩并进行排名
 
@@ -260,7 +260,7 @@ SELECT s_id,sum(s_score) as total
 from Score GROUP BY s_id ORDER BY total desc
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2020.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2020.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2020.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzwap4j1j306o0a0dfy.jpg)
 
 ### 21. 查询不同老师所教不同课程平均分从高到低显示
 
@@ -270,7 +270,7 @@ inner JOIN Course as b on a.c_id = b.c_id
 GROUP BY b.t_id,b.c_id order by "平均分" DESC
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2021.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2021.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2021.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzw8usn6j30ci05wglq.jpg)
 
 ### 22. 查询所有课程的成绩第2名到第3名的学生信息及该课程成绩
 
@@ -281,7 +281,7 @@ over(Partition by c_id order by s_score desc) m from Score as sc INNER JOIN
 Student as st on st.s_id = sc.s_id ) a where m in (2,3)
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2022.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2022.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2022.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzw7g8l3j30mm086gmb.jpg)
 
 ### 23.使用分段[100-85],[85-70],[70-60],[<60]来统计各科成绩，分别统计各分数段人数：课程ID和课程名称
 
@@ -305,7 +305,7 @@ INNER JOIN Course co
 on sc.c_id = co.c_id GROUP BY sc.c_id, co.c_name
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2023.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2023.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2023.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzw4q2zej313u05m3z6.jpg)
 
 ### 24. 查询学生平均成绩及其名次
 
@@ -316,7 +316,7 @@ from Score sc
 INNER JOIN Student st on st.s_id = sc.s_id  GROUP BY st.s_id
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2024.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2024.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2024.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzw2vnw7j30my0a03z1.jpg)
 
 ### 25. 查询各科成绩前三名的记录（不考虑成绩并列情况）
 
@@ -328,7 +328,7 @@ m FROM Score sc INNER JOIN Student st
 on st.s_id = sc.s_id ORDER BY sc.c_id ) as a WHERE m in (1,2,3)
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2025.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2025.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2025.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvzhl8aj30hw0ca753.jpg)
 
 ### 26. 查询每门课程被选修的学生数
 
@@ -339,7 +339,7 @@ from Score INNER JOIN Course
 on Score.c_id = Course.c_id GROUP BY Score.c_id, Course.c_name
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2026.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2026.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2026.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvtvsuuj30ey05ojrj.jpg)
 
 ### 27. 查询出只有两门课程的全部学生的学号和姓名
 
@@ -356,7 +356,7 @@ INNER JOIN Score sc on st.s_id = sc.s_id
 GROUP BY st.s_id,st.s_name  HAVING count(sc.s_score) = 2
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2027.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2027.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2027.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvr45odj30dk03m3yi.jpg)
 
 ### 28. 查询男生、女生人数
 
@@ -364,7 +364,7 @@ GROUP BY st.s_id,st.s_name  HAVING count(sc.s_score) = 2
 SELECT s_sex,count(s_sex) from Student GROUP BY s_sex
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2028.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2028.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2028.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvo7h7dj308k03umx1.jpg)
 
 ### 29. 查询名字中含有"风"字的学生信息
 
@@ -372,7 +372,7 @@ SELECT s_sex,count(s_sex) from Student GROUP BY s_sex
 SELECT * FROM Student WHERE s_name like '%风%'
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2029.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2029.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2029.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvmfsmlj30f202wmx4.jpg)
 
 ### 31. 查询1990年出生的学生名单
 
@@ -380,7 +380,7 @@ SELECT * FROM Student WHERE s_name like '%风%'
 SELECT * from Student WHERE YEAR(s_birth) = '1990'
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2030.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2030.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2030.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvjm0rlj30ds06udg8.jpg)
 
 ### 32. 查询平均成绩大于等于85的所有学生的学号、姓名和平均成绩
 
@@ -389,7 +389,7 @@ SELECT sc.s_id,st.s_name,avg(s_score) FROM Score sc INNER JOIN Student st
 on sc. s_id = st.s_id   GROUP BY sc.s_id,st.s_name HAVING avg(s_score)>=85
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2031.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2031.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2031.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvgsu6sj30ce03s3yj.jpg)
 
 ### 33. 查询每门课程的平均成绩，结果按平均成绩升序排序，平均成绩相同时，按课程号降序排列
 
@@ -398,7 +398,7 @@ SELECT c_id, avg(s_score) FROM Score GROUP BY c_id
 ORDER BY avg(s_score) asc, c_id desc
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2032.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2032.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2032.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvfbh77j308q05k3yk.jpg)
 
 ### 34.查询课程名称为"数学"，且分数低于60的学生姓名和分数
 
@@ -409,7 +409,7 @@ INNER JOIN Student st on sc.s_id = st.s_id
 WHERE co.c_name = "数学" and s_score < 60
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2033.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2033.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2033.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvdg2okj30e4036t8n.jpg)
 
 ### 35. 查询所有学生的课程及分数情况
 
@@ -425,7 +425,7 @@ INNER JOIN Student st on sc.s_id = st.s_id
 GROUP BY sc.s_id,st.s_name
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2034.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2034.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2034.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzvb3qxxj30jw0a63zd.jpg)
 
 ### 36. 查询任何一门课程成绩在70分以上的姓名、课程名称和分数
 
@@ -436,7 +436,7 @@ INNER JOIN Course co on sc.c_id = co.c_id
 WHERE sc.s_score > 70
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2035.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2035.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2035.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzws6051j30e00b6gmd.jpg)
 
 ### 37. 查询不及格的课程并按课程号从大到小排列
 
@@ -446,7 +446,7 @@ on sc.c_id = co.c_id WHERE s_score < 60
 ORDER BY co.c_id DESC
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2036.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2036.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2036.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzwqa4yzj30fk07wq3b.jpg)
 
 ### 38. 查询课程编号为03且课程成绩在80分以上的学生的学号和姓名
 
@@ -457,7 +457,7 @@ INNER JOIN Course co on sc.c_id = co.c_id
 WHERE sc.c_id = '03' and s_score > 80
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2037.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2037.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2037.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzwoe92rj30e203oaa3.jpg)
 
 ### 39. 求每门课程的学生人数
 
@@ -467,7 +467,7 @@ INNER JOIN Course co on sc.c_id = co.c_id
 GROUP BY sc.c_id
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2038.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2038.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2038.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzwm1rdrj30g4060dg0.jpg)
 
 ### 40. 查询选修“张三”老师所授课程的学生中成绩最高的学生姓名及其成绩
 
@@ -478,7 +478,7 @@ INNER JOIN Teacher te on c.t_id = te.t_id
 WHERE te.t_name = "张三"  ORDER BY s.s_score DESC LIMIT 0,1
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2039.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2039.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2039.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzwk41nij30ag03s746.jpg)
 
 ### 41. 查询不同课程成绩相同的学生的学生编号、课程编号、学生成绩
 
@@ -492,7 +492,7 @@ as b on a.s_id = b.s_id
 GROUP BY a.s_id HAVING MAX(s_score) = MIN(s_score)
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2040.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2040.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2040.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzwyk4wqj303802gwe9.jpg)
 
 ### 42. 查询每门功成绩最好的前两名
 
@@ -505,7 +505,7 @@ INNER JOIN Course co on co.c_id = sc.c_id
 WHERE m in (1,2)
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2041.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2041.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2041.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzx0fncij30kw092t9f.jpg)
 
 ### 43. 统计每门课程的学生选修人数（超过5人的课程才统计）。要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列
 
@@ -515,7 +515,7 @@ HAVING alias > 5
 ORDER BY alias DESC,c_id ASC
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2042.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2042.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2042.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzx2rvutj306y04q0sm.jpg)
 
 ### 44. 检索至少选修两门课程的学生学号
 
@@ -524,7 +524,7 @@ SELECT s_id,COUNT(c_id) coursenum from Score
  GROUP BY s_id HAVING coursenum >= 2
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2043.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2043.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2043.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzx565urj308a0920st.jpg)
 
 ### 45. 查询选修了全部课程的学生信息
 
@@ -534,7 +534,7 @@ INNER JOIN Student st on sc.s_id = st.s_id
 GROUP BY sc.s_id HAVING  coursenum  = (SELECT count(*) FROM Course)
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2044.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2044.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2044.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzxn1h6yj307y06q0sq.jpg)
 
 ### 46. 查询各学生的年龄
 
@@ -542,7 +542,7 @@ GROUP BY sc.s_id HAVING  coursenum  = (SELECT count(*) FROM Course)
 SELECT *,FLOOR(DATEDIFF(now(),s_birth)/365) from Student
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2045.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2045.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2045.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzx7hcm6j30qy08w3zh.jpg)
 
 ### 47. 查询没学过“张三”老师讲授的任一门课程的学生姓名
 
@@ -554,7 +554,7 @@ INNER JOIN Teacher te on te.t_id = co.t_id
 WHERE t_name = "张三")
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2046.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2046.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2046.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzx9u9mvj30e203eglk.jpg)
 
 ### 48. 查询下周过生日的学生
 
@@ -564,7 +564,7 @@ WEEK(CONCAT('2020-',SUBSTRING(s_birth,6,5)),1)
 = WEEK('2021-02-11',1) + 1
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2047.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2047.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2047.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzxc50yoj30dk03qwed.jpg)
 
 ### 49. 查询本月过生日的人
 
@@ -572,7 +572,7 @@ WEEK(CONCAT('2020-',SUBSTRING(s_birth,6,5)),1)
 SELECT * from Student WHERE MONTH(s_birth) =MONTH(now())
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2048.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2048.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2048.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzxei4rmj30eg03g3yh.jpg)
 
 ### 50. 查询下月过生日的人
 
@@ -581,4 +581,4 @@ SELECT * FROM Student WHERE MOD(MONTH(NOW())+ 1,12) =
  MONTH(s_birth)
 ```
 
-![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2049.png](SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2049.png)
+![SQL%E9%9D%A2%E8%AF%9550%E9%A2%98%200dbdb088ae97482d8531f38da98bd269/Untitled%2049.png](https://tva1.sinaimg.cn/large/008eGmZEly1gnjzxgeyadj30ec03gaa1.jpg)
